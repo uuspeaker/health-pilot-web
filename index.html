@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧成长 - 健康习惯助手</title>
+    <style>
+        :root {
+            --primary-dark: #0A192F;
+            --primary: #172A45;
+            --primary-light: #303C55;
+            --accent: #64FFDA;
+            --accent-light: #9FFFCB;
+            --text-light: #A8B2D1;
+            --white: #E6F1FF;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        h1 {
+            color: var(--accent);
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--accent-light);
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+        .feature {
+            background: var(--primary-light);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px;
+            width: calc(33% - 40px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+        .feature h2 {
+            color: var(--accent);
+            margin-top: 0;
+        }
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+        .cta {
+            text-align: center;
+            margin-top: 60px;
+        }
+        .cta-button {
+            background-color: var(--accent);
+            color: var(--primary-dark);
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: var(--accent-light);
+        }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            background-color: var(--primary-dark);
+        }
+        .icp {
+            font-size: 0.9rem;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>智慧成长</h1>
+            <p class="tagline">用AI与大数据技术帮助您形成健康习惯，实现智慧成长</p>
+        </header>
+        
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-brain feature-icon"></i>
+                <h2>AI 智能分析</h2>
+                <p>利用先进的人工智能技术，为您提供个性化的健康建议和成长规划。</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-chart-line feature-icon"></i>
+                <h2>数据驱动洞察</h2>
+                <p>通过大数据分析，追踪您的进步，发现潜在的成长机会。</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-heart feature-icon"></i>
+                <h2>健康习惯培养</h2>
+                <p>帮助您建立和保持健康的生活方式，实现身心的平衡发展。</p>
+            </div>
+        </div>
+
+        <div class="cta">
+            <button class="cta-button">开始智慧成长之旅</button>
+        </div>
+    </div>
+
+    <footer>
+        <p class="icp">
+            <a href="https://beian.miit.gov.cn/" target="_blank" style="color: var(--text-light); text-decoration: none;">
+                粤ICP备2023053434号-1
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
