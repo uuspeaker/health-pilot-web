@@ -71,18 +71,31 @@
             text-align: center;
             margin-top: 60px;
         }
-        .cta-button {
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .download-button {
+            display: inline-flex;
+            align-items: center;
             background-color: var(--accent);
             color: var(--primary-dark);
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            border: none;
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            text-decoration: none;
             border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .cta-button:hover {
+        .download-button:hover {
             background-color: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        .download-button i {
+            margin-right: 10px;
+            font-size: 1.3rem;
         }
         footer {
             text-align: center;
@@ -122,7 +135,14 @@
         </div>
 
         <div class="cta">
-            <!-- <button class="cta-button">开始智慧成长之旅</button> -->
+            <div class="download-buttons">
+                <a href="/downloads/healthpilot.apk" class="download-button">
+                    <i class="fab fa-android"></i>下载安卓应用
+                </a>
+                <a href="https://apps.apple.com/cn/app/%E5%81%A5%E5%BA%B7%E4%B9%A0%E6%83%AF/id6636492691" class="download-button">
+                    <i class="fab fa-apple"></i>下载iOS应用
+                </a>
+            </div>
         </div>
     </div>
 
