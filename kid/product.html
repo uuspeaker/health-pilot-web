@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>儿童应用</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.4;
+        }
+        
+        .container {
+            max-width: 100%;
+            padding: 20px 16px;
+        }
+        
+        .category {
+            margin-bottom: 40px;
+        }
+        
+        .category-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #000000;
+        }
+        
+        .app-list {
+            list-style: none;
+        }
+        
+        .app-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 0.5px solid #e5e5e7;
+        }
+        
+        .app-item:last-child {
+            border-bottom: none;
+        }
+        
+        .app-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            margin-right: 16px;
+            flex-shrink: 0;
+            background-color: #f2f2f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 14px;
+        }
+        
+        .app-info {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .app-name {
+            font-size: 16px;
+            font-weight: 400;
+            color: #000000;
+            margin-bottom: 2px;
+        }
+        
+        .app-subtitle {
+            font-size: 13px;
+            color: #8e8e93;
+            line-height: 1.3;
+        }
+        
+        .download-btn {
+            background-color: #007aff;
+            color: #ffffff;
+            border: none;
+            border-radius: 16px;
+            padding: 6px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 12px;
+            flex-shrink: 0;
+        }
+        
+        .download-btn:active {
+            background-color: #0056b3;
+        }
+        
+        @media (max-width: 375px) {
+            .container {
+                padding: 16px 12px;
+            }
+            
+            .app-icon {
+                width: 56px;
+                height: 56px;
+                border-radius: 12px;
+                margin-right: 12px;
+            }
+            
+            .app-name {
+                font-size: 15px;
+            }
+            
+            .app-subtitle {
+                font-size: 12px;
+            }
+            
+            .download-btn {
+                padding: 5px 12px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 儿童健康 -->
+        <div class="category">
+            <h2 class="category-title">儿童健康</h2>
+            <ul class="app-list">
+                <li class="app-item">
+                    <div class="app-icon">
+                        <img src="icon/宝宝健康手册.png" alt="宝宝健康手册" onerror="this.style.display='none'">
+                    </div>
+                    <div class="app-info">
+                        <div class="app-name">宝宝健康手册</div>
+                        <div class="app-subtitle">孩子生病不用慌</div>
+                    </div>
+                    <a href="https://apps.apple.com/cn/app/id6745573867" class="download-btn">获取</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 成长管理 -->
+        <div class="category">
+            <h2 class="category-title">成长管理</h2>
+            <ul class="app-list">
+                <li class="app-item">
+                    <div class="app-icon">
+                        <img src="icon/儿童积分.png" alt="儿童积分" onerror="this.style.display='none'">
+                    </div>
+                    <div class="app-info">
+                        <div class="app-name">儿童积分</div>
+                        <div class="app-subtitle">习惯养成好帮手</div>
+                    </div>
+                    <a href="https://apps.apple.com/cn/app/id6742539117" class="download-btn">获取</a>
+                </li>
+                <li class="app-item">
+                    <div class="app-icon">
+                        <img src="icon/儿童成长树.png" alt="儿童成长树" onerror="this.style.display='none'">
+                    </div>
+                    <div class="app-info">
+                        <div class="app-name">儿童成长树</div>
+                        <div class="app-subtitle">3~6岁儿童学习与发展指南</div>
+                    </div>
+                    <a href="https://apps.apple.com/cn/app/id6747507423" class="download-btn">获取</a>
+                </li>
+                <li class="app-item">
+                    <div class="app-icon">
+                        <img src="icon/儿童成长助手.png" alt="儿童成长助手" onerror="this.style.display='none'">
+                    </div>
+                    <div class="app-info">
+                        <div class="app-name">儿童成长助手</div>
+                        <div class="app-subtitle">用行为心理学方法科学育儿</div>
+                    </div>
+                    <a href="https://apps.apple.com/cn/app/id6747413656" class="download-btn">获取</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 认知启蒙 -->
+        <div class="category">
+            <h2 class="category-title">认知启蒙</h2>
+            <ul class="app-list">
+                <li class="app-item">
+                    <div class="app-icon">
+                        <img src="icon/气球识字.png" alt="气球识字" onerror="this.style.display='none'">
+                    </div>
+                    <div class="app-info">
+                        <div class="app-name">气球识字</div>
+                        <div class="app-subtitle">认字启蒙,亲子共玩</div>
+                    </div>
+                    <a href="https://apps.apple.com/cn/app/id6742337647" class="download-btn">获取</a>
+                </li>
+                <li class="app-item">
+                    <div class="app-icon">
+                        <img src="icon/彩虹翻牌.png" alt="彩虹翻牌" onerror="this.style.display='none'">
+                    </div>
+                    <div class="app-info">
+                        <div class="app-name">彩虹翻牌</div>
+                        <div class="app-subtitle">亲子陪伴，记忆启蒙</div>
+                    </div>
+                    <a href="https://apps.apple.com/cn/app/id6742731988" class="download-btn">获取</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 语言学习 -->
+        <div class="category">
+            <h2 class="category-title">综合素养</h2>
+            <ul class="app-list">
+                <li class="app-item">
+                    <div class="app-icon">
+                        <img src="icon/演讲助理.png" alt="演讲助理" onerror="this.style.display='none'">
+                    </div>
+                    <div class="app-info">
+                        <div class="app-name">演讲助理</div>
+                        <div class="app-subtitle">轻松准备演讲</div>
+                    </div>
+                    <a href="https://apps.apple.com/cn/app/id6747158031" class="download-btn">获取</a>
+                </li>
+                <li class="app-item">
+                    <div class="app-icon">
+                        <img src="icon/阅读管家.png" alt="阅读管家" onerror="this.style.display='none'">
+                    </div>
+                    <div class="app-info">
+                        <div class="app-name">阅读管家</div>
+                        <div class="app-subtitle">轻松管理阅读计划</div>
+                    </div>
+                    <a href="https://apps.apple.com/cn/app/id6747737458" class="download-btn">获取</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
