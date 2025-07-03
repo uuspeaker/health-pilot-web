@@ -80,37 +80,124 @@
             padding: 3rem 0;
         }
         
-        .intro-section {
-            text-align: center;
+        .learning-approach {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             margin-bottom: 3rem;
         }
         
-        .intro-section h2 {
+        .learning-approach h2 {
             font-size: 2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             color: #333;
+            text-align: center;
         }
         
-        .intro-section p {
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-            line-height: 1.8;
-        }
-        
-        .project-card {
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            overflow: hidden;
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
             margin-bottom: 2rem;
         }
         
-        .project-header {
-            background: linear-gradient(135deg, #6f42c1 0%, #e83e8c 100%);
-            color: white;
-            padding: 2rem;
+        .approach-item {
             text-align: center;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+        
+        .approach-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .approach-item h3 {
+            color: #333;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+        
+        .approach-item p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .target-audience {
+            background-color: #e8f5e8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .target-audience h3 {
+            color: #333;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+        
+        .target-audience p {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .projects-section {
+            margin-bottom: 2rem;
+        }
+        
+        .projects-section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #333;
+            text-align: center;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .project-card.available {
+            border-left: 4px solid #28a745;
+        }
+        
+        .project-card.coming-soon {
+            border-left: 4px solid #ffc107;
+        }
+        
+        .project-status {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background-color: #28a745;
+            color: white;
+        }
+        
+        .project-card.coming-soon .project-status {
+            background-color: #ffc107;
+            color: #856404;
         }
         
         .project-icon {
@@ -119,152 +206,100 @@
         }
         
         .project-title {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
             font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
         }
         
         .project-subtitle {
-            opacity: 0.9;
-            font-size: 1.1rem;
-        }
-        
-        .project-content {
-            padding: 2rem;
+            color: #666;
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
         }
         
         .project-description {
-            margin-bottom: 2rem;
-        }
-        
-        .project-description h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        
-        .project-description p {
-            color: #666;
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-        
-        .project-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .feature-item {
-            padding: 1.5rem;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .feature-item h4 {
-            margin-bottom: 0.5rem;
-            color: #333;
-        }
-        
-        .feature-item p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        .learning-path {
-            background-color: #f8f9fa;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-        }
-        
-        .learning-path h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        
-        .path-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-        
-        .path-step {
-            background-color: #fff;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            position: relative;
-        }
-        
-        .step-number {
-            background-color: #6f42c1;
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin: 0 auto 1rem;
-        }
-        
-        .path-step h4 {
-            margin-bottom: 0.5rem;
-            color: #333;
-        }
-        
-        .path-step p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        .download-section {
-            background-color: #e8f5e8;
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        .download-icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-        }
-        
-        .download-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        
-        .download-info p {
             color: #666;
             margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
         
-        .download-btn {
+        .project-actions {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        
+        .btn {
             display: inline-block;
-            background-color: #28a745;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
             font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
             transition: all 0.3s ease;
         }
         
-        .download-btn:hover {
-            background-color: #218838;
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0056b3;
             transform: translateY(-2px);
+        }
+        
+        .btn-interest {
+            background-color: #f8f9fa;
+            color: #333;
+            border: 2px solid #ddd;
+        }
+        
+        .btn-interest:hover {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        
+        .btn-interest:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .interest-count {
+            background-color: #dc3545;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+        
+        .interest-stats {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .interest-stats h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .interest-stats p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .stats-display {
+            font-size: 1.1rem;
+            color: #333;
         }
         
         /* 响应式设计 */
@@ -277,12 +312,16 @@
                 font-size: 1rem;
             }
             
-            .project-features {
+            .approach-grid {
                 grid-template-columns: 1fr;
             }
             
-            .path-steps {
+            .projects-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .project-card {
+                padding: 1.5rem;
             }
         }
     </style>
@@ -299,102 +338,230 @@
 
     <section class="hero">
         <div class="container">
-            <h1>项目实战学习</h1>
-            <p>通过真实项目案例，深入掌握AI辅助开发的实战技能</p>
+            <h1>AI辅助开发实战项目</h1>
+            <p>从零基础到产品上线，通过AI指令完成完整开发流程</p>
         </div>
     </section>
 
     <section class="content">
         <div class="container">
-            <div class="intro-section">
-                <h2>实战学习理念</h2>
-                <p>我们相信最好的学习方式是通过实际项目来掌握技能。通过精心设计的实战项目，您将体验从需求分析到项目部署的完整开发流程，在实践中掌握AI辅助开发的精髓。</p>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-header">
-                    <div class="project-icon">📱</div>
-                    <h2 class="project-title">App开发入门</h2>
-                    <p class="project-subtitle">完整的移动应用开发实战项目</p>
+            <!-- 学习模式介绍 -->
+            <div class="learning-approach">
+                <h2>学习模式</h2>
+                <div class="approach-grid">
+                    <div class="approach-item">
+                        <div class="approach-icon">🤖</div>
+                        <h3>AI指令驱动</h3>
+                        <p>每个开发步骤都提供具体的AI指令，让您学会如何与AI协作完成编码开发</p>
+                    </div>
+                    <div class="approach-item">
+                        <div class="approach-icon">📋</div>
+                        <h3>步骤化学习</h3>
+                        <p>将复杂的开发过程分解为清晰的步骤，每步都有详细说明和截图指导</p>
+                    </div>
+                    <div class="approach-item">
+                        <div class="approach-icon">🎯</div>
+                        <h3>0到1实战</h3>
+                        <p>从项目创建到产品上线的完整流程，学习特定产品的完整开发过程</p>
+                    </div>
+                    <div class="approach-item">
+                        <div class="approach-icon">🛠️</div>
+                        <h3>问题解决</h3>
+                        <p>提供遇到问题时的处理思路和方法，培养独立解决问题的能力</p>
+                    </div>
                 </div>
-                
-                <div class="project-content">
-                    <div class="project-description">
-                        <h3>项目简介</h3>
-                        <p>这是一个完整的移动应用开发实战项目，从零开始构建一个功能完整的移动应用。项目涵盖了现代移动应用开发的所有核心技术和最佳实践。</p>
-                        <p>通过这个项目，您将学习如何使用AI辅助工具来提高开发效率，包括代码生成、调试辅助、UI设计建议等。项目还包含了完整的开发文档和视频教程。</p>
-                    </div>
-                    
-                    <div class="project-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">🎯</div>
-                            <h4>需求分析</h4>
-                            <p>学习如何进行需求分析和产品设计</p>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">💻</div>
-                            <h4>技术选型</h4>
-                            <p>掌握技术选型和架构设计方法</p>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">🔧</div>
-                            <h4>开发实践</h4>
-                            <p>体验完整的开发流程和最佳实践</p>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">🚀</div>
-                            <h4>部署上线</h4>
-                            <p>学习应用打包、测试和发布流程</p>
+                <div class="target-audience">
+                    <h3>适合人群</h3>
+                    <p>零基础学习者，或掌握有限技术但想通过AI开发更多不同技术产品的用户</p>
+                </div>
+            </div>
+
+            <!-- 项目分类 -->
+            <div class="projects-section">
+                <h2>实战项目</h2>
+                <div class="projects-grid">
+            
+                    <!-- 移动应用开发 -->
+                    <div class="project-card available">
+                        <div class="project-status">已上线</div>
+                        <div class="project-icon">📱</div>
+                        <h3 class="project-title">App开发入门</h3>
+                        <p class="project-subtitle">建立一个单机版的习惯管理app</p>
+                        <p class="project-description">从零开始使用Flutter开发一个完整的习惯追踪应用，学习移动应用开发的完整流程。</p>
+                        <div class="project-actions">
+                            <a href="/downloads/programs/app开发入门.rar" class="btn btn-primary">立即学习</a>
                         </div>
                     </div>
-                    
-                    <div class="learning-path">
-                        <h3>学习路径</h3>
-                        <div class="path-steps">
-                            <div class="path-step">
-                                <div class="step-number">1</div>
-                                <h4>环境搭建</h4>
-                                <p>配置开发环境和工具</p>
-                            </div>
-                            <div class="path-step">
-                                <div class="step-number">2</div>
-                                <h4>基础框架</h4>
-                                <p>创建项目骨架和基础架构</p>
-                            </div>
-                            <div class="path-step">
-                                <div class="step-number">3</div>
-                                <h4>核心功能</h4>
-                                <p>实现主要业务功能模块</p>
-                            </div>
-                            <div class="path-step">
-                                <div class="step-number">4</div>
-                                <h4>UI优化</h4>
-                                <p>完善用户界面和交互体验</p>
-                            </div>
-                            <div class="path-step">
-                                <div class="step-number">5</div>
-                                <h4>测试调试</h4>
-                                <p>进行全面测试和问题修复</p>
-                            </div>
-                            <div class="path-step">
-                                <div class="step-number">6</div>
-                                <h4>打包发布</h4>
-                                <p>应用打包和发布上线</p>
-                            </div>
+
+                    <!-- Web前端开发 -->
+                    <div class="project-card coming-soon">
+                        <div class="project-status">即将推出</div>
+                        <div class="project-icon">🌐</div>
+                        <h3 class="project-title">Web前端开发</h3>
+                        <p class="project-subtitle">开发一个响应式的任务管理网站</p>
+                        <p class="project-description">使用React/Vue构建现代化的Web应用，学习前端框架和组件化开发。</p>
+                        <div class="project-actions">
+                            <button class="btn btn-interest" onclick="toggleInterest('web-frontend')">
+                                我想学习 <span class="interest-count" id="count-web-frontend">0</span>
+                            </button>
                         </div>
                     </div>
-                    
-                    <div class="download-section">
-                        <div class="download-icon">📦</div>
-                        <div class="download-info">
-                            <h3>下载实战项目</h3>
-                            <p>获取完整的项目源码、文档和视频教程</p>
-                            <a href="/downloads/programs/app开发入门.rar" class="download-btn">下载项目</a>
+
+                    <!-- 小程序开发 -->
+                    <div class="project-card coming-soon">
+                        <div class="project-status">即将推出</div>
+                        <div class="project-icon">📋</div>
+                        <h3 class="project-title">小程序开发</h3>
+                        <p class="project-subtitle">制作一个简单的记账小程序</p>
+                        <p class="project-description">学习微信小程序开发，从界面设计到数据存储的完整开发过程。</p>
+                        <div class="project-actions">
+                            <button class="btn btn-interest" onclick="toggleInterest('miniprogram')">
+                                我想学习 <span class="interest-count" id="count-miniprogram">0</span>
+                            </button>
                         </div>
+                    </div>
+
+                    <!-- 数据分析项目 -->
+                    <div class="project-card coming-soon">
+                        <div class="project-status">即将推出</div>
+                        <div class="project-icon">📊</div>
+                        <h3 class="project-title">数据分析项目</h3>
+                        <p class="project-subtitle">分析个人健康数据生成报告</p>
+                        <p class="project-description">使用Python进行数据分析，学习数据处理、可视化和自动报告生成。</p>
+                        <div class="project-actions">
+                            <button class="btn btn-interest" onclick="toggleInterest('data-analysis')">
+                                我想学习 <span class="interest-count" id="count-data-analysis">0</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 桌面应用开发 -->
+                    <div class="project-card coming-soon">
+                        <div class="project-status">即将推出</div>
+                        <div class="project-icon">🖥️</div>
+                        <h3 class="project-title">桌面应用开发</h3>
+                        <p class="project-subtitle">开发一个文件管理工具</p>
+                        <p class="project-description">使用Electron构建跨平台桌面应用，学习桌面软件开发技术。</p>
+                        <div class="project-actions">
+                            <button class="btn btn-interest" onclick="toggleInterest('desktop-app')">
+                                我想学习 <span class="interest-count" id="count-desktop-app">0</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 内容创作工具 -->
+                    <div class="project-card coming-soon">
+                        <div class="project-status">即将推出</div>
+                        <div class="project-icon">✨</div>
+                        <h3 class="project-title">HTML内容页面</h3>
+                        <p class="project-subtitle">开发小红书风格的内容展示页面</p>
+                        <p class="project-description">使用HTML/CSS/JavaScript创建美观的内容展示页面，学习前端设计技巧。</p>
+                        <div class="project-actions">
+                            <button class="btn btn-interest" onclick="toggleInterest('content-tools')">
+                                我想学习 <span class="interest-count" id="count-content-tools">0</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 学习意愿统计 -->
+                <div class="interest-stats">
+                    <h3>📈 学习需求统计</h3>
+                    <p>我们会根据大家的学习意愿优先开发相关项目</p>
+                    <div class="stats-display">
+                        <span>总需求: <strong id="total-interest">0</strong></span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        // 学习意愿管理
+        const INTEREST_STORAGE_KEY = 'learning_interests';
+        const CLICK_COOLDOWN = 5000; // 5秒防重复点击
+        
+        // 从localStorage加载数据
+        function loadInterests() {
+            const stored = localStorage.getItem(INTEREST_STORAGE_KEY);
+            return stored ? JSON.parse(stored) : {
+                'web-frontend': 0,
+                'miniprogram': 0,
+                'data-analysis': 0,
+                'desktop-app': 0,
+                'content-tools': 0,
+                lastClicks: {}
+            };
+        }
+        
+        // 保存数据到localStorage
+        function saveInterests(interests) {
+            localStorage.setItem(INTEREST_STORAGE_KEY, JSON.stringify(interests));
+        }
+        
+        // 更新显示
+        function updateDisplay() {
+            const interests = loadInterests();
+            let total = 0;
+            
+            // 更新每个项目的计数
+            for (const [key, count] of Object.entries(interests)) {
+                if (key !== 'lastClicks') {
+                    const countElement = document.getElementById(`count-${key}`);
+                    if (countElement) {
+                        countElement.textContent = count;
+                        total += count;
+                    }
+                }
+            }
+            
+            // 更新总计数
+            const totalElement = document.getElementById('total-interest');
+            if (totalElement) {
+                totalElement.textContent = total;
+            }
+        }
+        
+        // 切换学习意愿
+        function toggleInterest(projectId) {
+            const interests = loadInterests();
+            const now = Date.now();
+            const lastClick = interests.lastClicks[projectId] || 0;
+            
+            // 检查是否在冷却期内
+            if (now - lastClick < CLICK_COOLDOWN) {
+                const remainingTime = Math.ceil((CLICK_COOLDOWN - (now - lastClick)) / 1000);
+                alert(`请等待 ${remainingTime} 秒后再次点击`);
+                return;
+            }
+            
+            // 增加计数
+            interests[projectId] = (interests[projectId] || 0) + 1;
+            interests.lastClicks[projectId] = now;
+            
+            // 保存并更新显示
+            saveInterests(interests);
+            updateDisplay();
+            
+            // 临时禁用按钮
+            const button = event.target;
+            button.disabled = true;
+            button.style.opacity = '0.6';
+            
+            setTimeout(() => {
+                button.disabled = false;
+                button.style.opacity = '1';
+            }, CLICK_COOLDOWN);
+            
+            // 显示感谢消息
+            alert('感谢您的反馈！我们会根据学习需求优先开发相关项目。');
+        }
+        
+        // 页面加载时初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDisplay();
+        });
+    </script>
 </body>
 </html>
+
