@@ -267,28 +267,6 @@
             transform: translateY(-2px);
         }
         
-        .download-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .download-buttons .download-btn {
-            flex: 1;
-            min-width: 140px;
-            max-width: 160px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-        }
-        
-        .os-icon {
-            font-size: 1.2rem;
-        }
-        
         /* 响应式设计 */
         @media (max-width: 768px) {
             .hero h1 {
@@ -305,16 +283,6 @@
             
             .path-steps {
                 grid-template-columns: 1fr;
-            }
-            
-            .download-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .download-buttons .download-btn {
-                max-width: 200px;
-                width: 100%;
             }
         }
     </style>
@@ -421,24 +389,7 @@
                         <div class="download-info">
                             <h3>下载实战项目</h3>
                             <p>获取完整的项目源码、文档和视频教程</p>
-                            <div class="download-buttons">
-                                <a href="/downloads/programs/app开发入门/windows/app开发入门-windows.rar" class="download-btn">
-                                    <span class="os-icon">🪟</span>
-                                    Windows版本
-                                </a>
-                                <a href="/downloads/programs/app开发入门/macos/app开发入门-macos.rar" class="download-btn">
-                                    <span class="os-icon">🍎</span>
-                                    macOS版本
-                                </a>
-                                <a href="/downloads/programs/app开发入门/ios/app开发入门-ios.rar" class="download-btn">
-                                    <span class="os-icon">📱</span>
-                                    iOS版本
-                                </a>
-                                <a href="/downloads/programs/app开发入门/android/app开发入门-android.rar" class="download-btn">
-                                    <span class="os-icon">🤖</span>
-                                    Android版本
-                                </a>
-                            </div>
+                            <a href="/downloads/programs/app开发入门.rar" class="download-btn">下载项目</a>
                         </div>
                     </div>
                 </div>
