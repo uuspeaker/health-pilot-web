@@ -56,7 +56,7 @@
         
         /* 主内容区 */
         .hero {
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 3rem 0;
             text-align: center;
@@ -107,13 +107,13 @@
         
         .tab-btn.active {
             background: white;
-            color: #28a745;
-            border-bottom-color: #28a745;
+            color: #667eea;
+            border-bottom-color: #667eea;
         }
         
         .tab-btn:hover {
             background: white;
-            color: #28a745;
+            color: #667eea;
         }
         
         .tab-content {
@@ -134,7 +134,7 @@
         }
         
         .flow-card {
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border-radius: 12px;
             padding: 2rem 1.5rem;
@@ -231,7 +231,7 @@
         
         .flow-arrow {
             font-size: 1.5rem;
-            color: #28a745;
+            color: #667eea;
             font-weight: bold;
             animation: pulse 2s infinite;
         }
@@ -258,7 +258,7 @@
             content: "✓";
             position: absolute;
             left: 0;
-            color: #28a745;
+            color: #667eea;
             font-weight: bold;
         }
         
@@ -355,7 +355,7 @@
         }
         
         .step-number {
-            background-color: #28a745;
+            background-color: #667eea;
             color: white;
             width: 30px;
             height: 30px;
@@ -421,6 +421,10 @@
         
         /* 响应式设计 */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
             .hero h1 {
                 font-size: 2rem;
             }
@@ -429,26 +433,46 @@
                 font-size: 1rem;
             }
             
-            .flow-diagram {
+            .tab-btn {
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+            }
+            
+            .tab-content {
+                padding: 2rem 1rem;
+            }
+            
+            .flow-cards {
                 flex-direction: column;
-                align-items: center;
+                gap: 0.5rem;
             }
             
-            .flow-arrow {
-                transform: rotate(90deg);
+            .flow-card {
+                min-width: auto;
+                padding: 1.5rem 1rem;
             }
             
-            .flow-step {
-                min-width: 200px;
+            .download-section {
+                padding: 2rem 1rem;
             }
             
             .download-buttons {
                 flex-direction: column;
-                align-items: center;
+                gap: 0.5rem;
             }
             
             .download-buttons .download-btn {
-                max-width: 100%;
+                min-width: auto;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
             }
         }
     </style>

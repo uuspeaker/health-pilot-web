@@ -110,6 +110,8 @@
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
+            color: #333;
+            padding: 0.5rem;
         }
         
         /* 主内容区 */
@@ -193,19 +195,33 @@
         @media (max-width: 768px) {
             .nav-menu {
                 position: fixed;
-                top: 100%;
-                left: 0;
-                right: 0;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
                 background-color: #fff;
                 flex-direction: column;
-                padding: 1rem;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                transform: translateY(-100%);
-                transition: transform 0.3s ease;
+                padding: 2rem 1rem;
+                box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+                transition: left 0.3s ease;
+                z-index: 999;
+                overflow-y: auto;
             }
             
             .nav-menu.active {
-                transform: translateY(0);
+                left: 0;
+            }
+            
+            .nav-item {
+                margin-bottom: 1rem;
+                width: 100%;
+            }
+            
+            .nav-link {
+                display: block;
+                padding: 1rem;
+                font-size: 1.1rem;
+                border-bottom: 1px solid #e9ecef;
             }
             
             .mobile-menu-toggle {
@@ -220,6 +236,12 @@
                 transform: none;
                 background-color: #f8f9fa;
                 margin-top: 0.5rem;
+                border-radius: 8px;
+            }
+            
+            .dropdown-item {
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
             }
             
             .hero h1 {
@@ -280,17 +302,17 @@
         <div class="container">
             <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">为什么选择我们？</h2>
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-card" onclick="location.href='tools/index.html'" style="cursor: pointer;">
                     <div class="feature-icon">🛠️</div>
                     <h3 class="feature-title">专业工具</h3>
                     <p class="feature-desc">提供开发环境检测、录播器等实用工具，帮助您快速配置开发环境，记录学习过程</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" onclick="location.href='study/programs.html'" style="cursor: pointer;">
                     <div class="feature-icon">📚</div>
                     <h3 class="feature-title">实战项目</h3>
                     <p class="feature-desc">通过真实项目案例，逐步掌握AI辅助开发的核心技术和最佳实践</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" onclick="location.href='examples/index.html'" style="cursor: pointer;">
                     <div class="feature-icon">🎯</div>
                     <h3 class="feature-title">成功案例</h3>
                     <p class="feature-desc">展示已成功上线的AI辅助开发产品，为您的学习提供实际参考</p>
@@ -307,6 +329,21 @@
             
             mobileToggle.addEventListener('click', function() {
                 navMenu.classList.toggle('active');
+            });
+            
+            // 点击外部区域关闭菜单
+            document.addEventListener('click', function(event) {
+                if (!navMenu.contains(event.target) && !mobileToggle.contains(event.target)) {
+                    navMenu.classList.remove('active');
+                }
+            });
+            
+            // 点击菜单项后关闭菜单
+            const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                });
             });
         });
     </script>

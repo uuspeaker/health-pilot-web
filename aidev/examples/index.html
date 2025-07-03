@@ -194,10 +194,52 @@
         .download-btn.ios {
             background-color: #007bff;
             color: white;
+            position: relative;
         }
         
         .download-btn.ios:hover {
             background-color: #0056b3;
+        }
+        
+        .download-btn.ios.region-limited {
+            background-color: #6c757d;
+            cursor: help;
+        }
+        
+        .download-btn.ios.region-limited:hover {
+            background-color: #5a6268;
+        }
+        
+        .region-notice {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            margin-bottom: 0.5rem;
+        }
+        
+        .region-notice::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: #333;
+        }
+        
+        .download-btn.ios.region-limited:hover .region-notice {
+            opacity: 1;
+            visibility: visible;
         }
         
         .download-btn.android {
@@ -245,6 +287,10 @@
         
         /* 响应式设计 */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
             .hero h1 {
                 font-size: 2rem;
             }
@@ -255,21 +301,40 @@
             
             .products-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .product-header {
+                padding: 1.5rem;
+            }
+            
+            .product-icon {
+                width: 100px;
+                height: 100px;
+                border-radius: 20px;
+            }
+            
+            .product-name {
+                font-size: 1.3rem;
             }
             
             .download-buttons {
                 flex-direction: column;
-                align-items: center;
+                gap: 0.5rem;
             }
             
             .download-btn {
-                width: 100%;
-                max-width: 200px;
-                justify-content: center;
+                font-size: 0.85rem;
+                padding: 0.6rem 1.2rem;
             }
             
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
             }
         }
     </style>
@@ -310,9 +375,10 @@
                             <h3 class="product-name">宝宝健康手册</h3>
                             <p class="product-subtitle">孩子生病不用慌</p>
                             <div class="download-buttons">
-                                <a href="https://apps.apple.com/cn/app/id6745573867" class="download-btn ios">
+                                <a href="https://apps.apple.com/cn/app/id6745573867" class="download-btn ios region-limited">
                                     <span class="platform-icon">🍎</span>
                                     iOS下载
+                                    <div class="region-notice">该应用在中国大陆地区暂时下架</div>
                                 </a>
                                 <span class="download-btn android">
                                     <span class="platform-icon">🤖</span>
@@ -336,9 +402,10 @@
                             <h3 class="product-name">儿童积分</h3>
                             <p class="product-subtitle">习惯养成好帮手</p>
                             <div class="download-buttons">
-                                <a href="https://apps.apple.com/cn/app/id6742539117" class="download-btn ios">
+                                <a href="https://apps.apple.com/cn/app/id6742539117" class="download-btn ios region-limited">
                                     <span class="platform-icon">🍎</span>
                                     iOS下载
+                                    <div class="region-notice">该应用在中国大陆地区暂时下架</div>
                                 </a>
                                 <span class="download-btn android">
                                     <span class="platform-icon">🤖</span>
@@ -355,9 +422,10 @@
                             <h3 class="product-name">儿童成长树</h3>
                             <p class="product-subtitle">3~6岁儿童学习与发展指南</p>
                             <div class="download-buttons">
-                                <a href="https://apps.apple.com/cn/app/id6747507423" class="download-btn ios">
+                                <a href="https://apps.apple.com/cn/app/id6747507423" class="download-btn ios region-limited">
                                     <span class="platform-icon">🍎</span>
                                     iOS下载
+                                    <div class="region-notice">该应用在中国大陆地区暂时下架</div>
                                 </a>
                                 <span class="download-btn android">
                                     <span class="platform-icon">🤖</span>
@@ -374,9 +442,10 @@
                             <h3 class="product-name">儿童成长助手</h3>
                             <p class="product-subtitle">用行为心理学方法科学育儿</p>
                             <div class="download-buttons">
-                                <a href="https://apps.apple.com/cn/app/id6747413656" class="download-btn ios">
+                                <a href="https://apps.apple.com/cn/app/id6747413656" class="download-btn ios region-limited">
                                     <span class="platform-icon">🍎</span>
                                     iOS下载
+                                    <div class="region-notice">该应用在中国大陆地区暂时下架</div>
                                 </a>
                                 <span class="download-btn android">
                                     <span class="platform-icon">🤖</span>
@@ -400,9 +469,10 @@
                             <h3 class="product-name">气球识字</h3>
                             <p class="product-subtitle">认字启蒙,亲子共玩</p>
                             <div class="download-buttons">
-                                <a href="https://apps.apple.com/cn/app/id6742337647" class="download-btn ios">
+                                <a href="https://apps.apple.com/cn/app/id6742337647" class="download-btn ios region-limited">
                                     <span class="platform-icon">🍎</span>
                                     iOS下载
+                                    <div class="region-notice">该应用在中国大陆地区暂时下架</div>
                                 </a>
                                 <span class="download-btn android">
                                     <span class="platform-icon">🤖</span>
@@ -419,9 +489,10 @@
                             <h3 class="product-name">彩虹翻牌</h3>
                             <p class="product-subtitle">亲子陪伴，记忆启蒙</p>
                             <div class="download-buttons">
-                                <a href="https://apps.apple.com/cn/app/id6742731988" class="download-btn ios">
+                                <a href="https://apps.apple.com/cn/app/id6742731988" class="download-btn ios region-limited">
                                     <span class="platform-icon">🍎</span>
                                     iOS下载
+                                    <div class="region-notice">该应用在中国大陆地区暂时下架</div>
                                 </a>
                                 <span class="download-btn android">
                                     <span class="platform-icon">🤖</span>
@@ -445,9 +516,10 @@
                             <h3 class="product-name">演讲助理</h3>
                             <p class="product-subtitle">轻松准备演讲</p>
                             <div class="download-buttons">
-                                <a href="https://apps.apple.com/cn/app/id6747158031" class="download-btn ios">
+                                <a href="https://apps.apple.com/cn/app/id6747158031" class="download-btn ios region-limited">
                                     <span class="platform-icon">🍎</span>
                                     iOS下载
+                                    <div class="region-notice">该应用在中国大陆地区暂时下架</div>
                                 </a>
                                 <span class="download-btn android">
                                     <span class="platform-icon">🤖</span>
@@ -464,9 +536,10 @@
                             <h3 class="product-name">阅读管家</h3>
                             <p class="product-subtitle">轻松管理阅读计划</p>
                             <div class="download-buttons">
-                                <a href="https://apps.apple.com/cn/app/id6747737458" class="download-btn ios">
+                                <a href="https://apps.apple.com/cn/app/id6747737458" class="download-btn ios region-limited">
                                     <span class="platform-icon">🍎</span>
                                     iOS下载
+                                    <div class="region-notice">该应用在中国大陆地区暂时下架</div>
                                 </a>
                                 <span class="download-btn android">
                                     <span class="platform-icon">🤖</span>
