@@ -162,6 +162,27 @@
             transform: translateY(-2px);
         }
         
+        .download-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .download-buttons .download-btn {
+            flex: 1;
+            min-width: 150px;
+            max-width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .os-icon {
+            font-size: 1.2rem;
+        }
+        
         .learning-process {
             background-color: #fff;
             padding: 2rem;
@@ -278,6 +299,15 @@
             .benefits-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .download-buttons .download-btn {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -321,7 +351,20 @@
                     <div class="download-info">
                         <h3>立即下载</h3>
                         <p>获取最新版本的开发录播器</p>
-                        <a href="/downloads/tools/开发录播器.rar" class="download-btn">下载工具</a>
+                        <div class="download-buttons">
+                            <a href="/downloads/tools/开发录播器/windows/开发录播器-windows.rar" class="download-btn">
+                                <span class="os-icon">🪟</span>
+                                Windows版本
+                            </a>
+                            <a href="/downloads/tools/开发录播器/macos/开发录播器-macos.rar" class="download-btn">
+                                <span class="os-icon">🍎</span>
+                                macOS版本
+                            </a>
+                            <a href="/downloads/tools/开发录播器/linux/开发录播器-linux.rar" class="download-btn">
+                                <span class="os-icon">🐧</span>
+                                Linux版本
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
