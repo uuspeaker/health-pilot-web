@@ -80,70 +80,99 @@
             padding: 3rem 0;
         }
         
-        .tool-info {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+        .detection-section {
             margin-bottom: 3rem;
         }
         
-        .tool-description {
-            flex: 1;
-        }
-        
-        .tool-description h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        
-        .tool-description p {
-            color: #666;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-        
-        .features-list {
-            list-style: none;
+        .section-header {
+            text-align: center;
             margin-bottom: 2rem;
         }
         
-        .features-list li {
-            padding: 0.5rem 0;
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .section-header p {
             color: #666;
-            position: relative;
-            padding-left: 2rem;
+            font-size: 1.1rem;
         }
         
-        .features-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #28a745;
-            font-weight: bold;
-        }
-        
-        .download-section {
-            background-color: #f8f9fa;
+        .detection-card {
+            background: white;
+            border-radius: 12px;
             padding: 2rem;
-            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
         }
         
-        .download-icon {
-            font-size: 4rem;
+        .detection-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .detection-card.available {
+            border-left: 4px solid #28a745;
+        }
+        
+        .detection-card.coming-soon {
+            border-left: 4px solid #ffc107;
+            opacity: 0.8;
+        }
+        
+        .detection-icon {
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
         
-        .download-info h3 {
+        .detection-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: #333;
         }
         
-        .download-info p {
+        .detection-card p {
             color: #666;
             margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .detection-features {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .feature-tag {
+            background-color: #e8f5e8;
+            color: #28a745;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .coming-soon-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: #ffc107;
+            color: #856404;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .detection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
         
         .download-btn {
@@ -160,6 +189,18 @@
         .download-btn:hover {
             background-color: #0056b3;
             transform: translateY(-2px);
+        }
+        
+        .download-btn.disabled {
+            background-color: #6c757d;
+            color: #fff;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+        
+        .download-btn.disabled:hover {
+            background-color: #6c757d;
+            transform: none;
         }
         
         .download-buttons {
@@ -223,17 +264,16 @@
         
         /* 响应式设计 */
         @media (max-width: 768px) {
-            .tool-info {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
             .hero h1 {
                 font-size: 2rem;
             }
             
             .hero p {
                 font-size: 1rem;
+            }
+            
+            .detection-grid {
+                grid-template-columns: 1fr;
             }
             
             .requirements-grid {
@@ -264,43 +304,75 @@
     <section class="hero">
         <div class="container">
             <h1>开发环境检测助手</h1>
-            <p>帮助您快速检测和配置不同开发环境的核心配置，提升开发效率</p>
+            <p>智能检测开发环境配置，目前支持App开发环境，更多检测功能即将推出</p>
         </div>
     </section>
 
     <section class="content">
         <div class="container">
-            <div class="tool-info">
-                <div class="tool-description">
-                    <h2>工具介绍</h2>
-                    <p>开发环境检测助手是一个专业的开发环境配置检测工具，能够帮助开发者快速诊断和配置各种开发环境。无论您是新手还是资深开发者，都能通过这个工具快速解决环境配置问题。</p>
-                    
-                    <h3>主要功能</h3>
-                    <ul class="features-list">
-                        <li>检测Node.js、Python、Java等主流开发环境</li>
-                        <li>自动诊断环境配置问题</li>
-                        <li>提供详细的修复建议和步骤</li>
-                        <li>支持多种操作系统（Windows、macOS、Linux）</li>
-                        <li>一键生成环境配置报告</li>
-                        <li>集成常用开发工具检测</li>
-                    </ul>
+            <!-- 当前可用检测 -->
+            <div class="detection-section">
+                <div class="section-header">
+                    <h2>🚀 当前可用检测</h2>
+                    <p>已经可以使用的环境检测功能</p>
                 </div>
                 
-                <div class="download-section">
-                    <div class="download-icon">📦</div>
-                    <div class="download-info">
-                        <h3>立即下载</h3>
-                        <p>获取最新版本的开发环境检测助手</p>
-                        <div class="download-buttons">
-                            <a href="/downloads/tools/开发环境检测助手/windows/开发环境检测助手.exe" class="download-btn">
-                                <span class="os-icon">🪟</span>
-                                Windows版本
-                            </a>
-                            <a href="/downloads/tools/开发环境检测助手/macos/开发环境检测助手.app" class="download-btn">
-                                <span class="os-icon">🍎</span>
-                                macOS版本
-                            </a>
-                        </div>
+                <div class="detection-card available">
+                    <div class="detection-icon">📱</div>
+                    <h3>App开发环境检测</h3>
+                    <p>检测Flutter、Android Studio等移动应用开发环境配置</p>
+                    <div class="detection-features">
+                        <span class="feature-tag">Flutter SDK</span>
+                        <span class="feature-tag">Android Studio</span>
+                        <span class="feature-tag">设备连接</span>
+                    </div>
+                    <div class="download-buttons">
+                        <a href="/downloads/tools/开发环境检测助手/windows/开发环境检测助手.exe" class="download-btn">
+                            <span class="os-icon">🪟</span>
+                            Windows版本
+                        </a>
+                        <a href="#" class="download-btn disabled">
+                            <span class="os-icon">🍎</span>
+                            macOS版本 (暂未提供)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 即将推出的检测 -->
+            <div class="detection-section">
+                <div class="section-header">
+                    <h2>🔮 即将推出</h2>
+                    <p>正在开发中的环境检测功能</p>
+                </div>
+                
+                <div class="detection-grid">
+                    <div class="detection-card coming-soon">
+                        <div class="detection-icon">🌐</div>
+                        <h3>Web前端环境检测</h3>
+                        <p>Node.js、npm、React/Vue等前端开发环境</p>
+                        <div class="coming-soon-badge">即将推出</div>
+                    </div>
+                    
+                    <div class="detection-card coming-soon">
+                        <div class="detection-icon">🐍</div>
+                        <h3>Python环境检测</h3>
+                        <p>Python、pip、虚拟环境等配置检测</p>
+                        <div class="coming-soon-badge">即将推出</div>
+                    </div>
+                    
+                    <div class="detection-card coming-soon">
+                        <div class="detection-icon">☕</div>
+                        <h3>Java环境检测</h3>
+                        <p>JDK、Maven、Gradle等Java开发环境</p>
+                        <div class="coming-soon-badge">即将推出</div>
+                    </div>
+                    
+                    <div class="detection-card coming-soon">
+                        <div class="detection-icon">🖥️</div>
+                        <h3>桌面应用环境检测</h3>
+                        <p>Electron、Qt等桌面应用开发环境</p>
+                        <div class="coming-soon-badge">即将推出</div>
                     </div>
                 </div>
             </div>

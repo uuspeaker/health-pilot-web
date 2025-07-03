@@ -80,27 +80,166 @@
             padding: 3rem 0;
         }
         
-        .tool-info {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
+        .tab-section {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .tab-header {
+            display: flex;
+            background-color: #f8f9fa;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            padding: 1.5rem 2rem;
+            border: none;
+            background: transparent;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab-btn.active {
+            background: white;
+            color: #28a745;
+            border-bottom-color: #28a745;
+        }
+        
+        .tab-btn:hover {
+            background: white;
+            color: #28a745;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 3rem 2rem;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .flow-cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .flow-card {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            min-width: 150px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+        
+        .flow-card.active {
+            opacity: 1;
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+        
+        .card-number {
+            background: rgba(255,255,255,0.3);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 0 auto 1rem;
+        }
+        
+        .flow-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .flow-card p {
+            font-size: 0.9rem;
+            opacity: 0.9;
         }
         
         .tool-description {
-            flex: 1;
+            margin-bottom: 2rem;
         }
         
-        .tool-description h2 {
-            font-size: 2rem;
+        .tool-description h3 {
+            font-size: 1.5rem;
             margin-bottom: 1rem;
             color: #333;
         }
         
-        .tool-description p {
-            color: #666;
+        .recording-flow, .playback-flow {
+            margin-top: 2rem;
+        }
+        
+        .recording-flow h3, .playback-flow h3 {
+            font-size: 1.5rem;
             margin-bottom: 1.5rem;
-            line-height: 1.8;
+            color: #333;
+            text-align: center;
+        }
+        
+        .flow-diagram {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 2rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .flow-step {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            min-width: 150px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            opacity: 0.6;
+        }
+        
+        .flow-step.active {
+            opacity: 1;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .flow-step:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .flow-arrow {
+            font-size: 1.5rem;
+            color: #28a745;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
         }
         
         .features-list {
@@ -124,10 +263,12 @@
         }
         
         .download-section {
-            background-color: #f8f9fa;
-            padding: 2rem;
-            border-radius: 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 12px;
             text-align: center;
+            margin-bottom: 3rem;
         }
         
         .download-icon {
@@ -136,29 +277,30 @@
         }
         
         .download-info h3 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
-            color: #333;
+            color: white;
         }
         
         .download-info p {
-            color: #666;
-            margin-bottom: 1.5rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
         }
         
         .download-btn {
             display: inline-block;
-            background-color: #28a745;
-            color: white;
+            background-color: white;
+            color: #667eea;
             padding: 1rem 2rem;
-            border-radius: 50px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
         }
         
         .download-btn:hover {
-            background-color: #218838;
+            background-color: #f8f9fa;
             transform: translateY(-2px);
         }
         
@@ -279,11 +421,6 @@
         
         /* 响应式设计 */
         @media (max-width: 768px) {
-            .tool-info {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
             .hero h1 {
                 font-size: 2rem;
             }
@@ -292,12 +429,17 @@
                 font-size: 1rem;
             }
             
-            .process-steps {
-                grid-template-columns: 1fr;
+            .flow-diagram {
+                flex-direction: column;
+                align-items: center;
             }
             
-            .benefits-grid {
-                grid-template-columns: 1fr;
+            .flow-arrow {
+                transform: rotate(90deg);
+            }
+            
+            .flow-step {
+                min-width: 200px;
             }
             
             .download-buttons {
@@ -323,47 +465,103 @@
 
     <section class="hero">
         <div class="container">
-            <h1>开发录播器</h1>
-            <p>记录开发过程，回放关键步骤，通过实战案例快速掌握AI辅助开发技术</p>
+            <h1>AI开发学习工具</h1>
+            <p>创新的录制播放学习系统，让您轻松掌握AI辅助开发技术</p>
         </div>
     </section>
 
     <section class="content">
         <div class="container">
-            <div class="tool-info">
-                <div class="tool-description">
-                    <h2>工具介绍</h2>
-                    <p>开发录播器是一个专业的开发过程记录工具，能够记录您开发项目的每一个关键步骤，并支持回放功能。通过这种实战型的学习方式，您可以更快速地掌握AI辅助开发技术。</p>
-                    
-                    <h3>主要功能</h3>
-                    <ul class="features-list">
-                        <li>录制开发项目的完整过程</li>
-                        <li>保存关键开发步骤的快照</li>
-                        <li>支持代码变更的可视化回放</li>
-                        <li>记录AI辅助开发的决策过程</li>
-                        <li>生成学习报告和总结</li>
-                        <li>支持多种开发环境和IDE</li>
-                    </ul>
+            <!-- 下载区域 -->
+            <div class="download-section">
+                <div class="download-icon">📦</div>
+                <div class="download-info">
+                    <h3>下载学习工具</h3>
+                    <p>获取完整的录制播放工具，开始您的AI开发学习之旅</p>
+                    <div class="download-buttons">
+                        <a href="/downloads/tools/开发录播器/windows/开发录播器.exe" class="download-btn">
+                            <span class="os-icon">🪟</span>
+                            Windows版本
+                        </a>
+                        <a href="/downloads/tools/开发录播器/macos/开发录播器.zip" class="download-btn">
+                            <span class="os-icon">🍎</span>
+                            macOS版本
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab切换功能 -->
+            <div class="tab-section">
+                <div class="tab-header">
+                    <button class="tab-btn active" onclick="switchTab('record')">
+                        🎬 录制功能
+                    </button>
+                    <button class="tab-btn" onclick="switchTab('play')">
+                        ▶️ 播放功能
+                    </button>
                 </div>
                 
-                <div class="download-section">
-                    <div class="download-icon">🎬</div>
-                    <div class="download-info">
-                        <h3>立即下载</h3>
-                        <p>获取最新版本的开发录播器</p>
-                        <div class="download-buttons">
-                            <a href="/downloads/tools/开发录播器/windows/开发录播器.exe" class="download-btn">
-                                <span class="os-icon">🪟</span>
-                                Windows版本
-                            </a>
-                            <a href="/downloads/tools/开发录播器/macos/开发录播器.app" class="download-btn">
-                                <span class="os-icon">🍎</span>
-                                macOS版本
-                            </a>
+                <!-- 录制功能内容 -->
+                <div class="tab-content active" id="record-content">
+                    <div class="flow-cards">
+                        <div class="flow-card" id="record-card-1">
+                            <div class="card-number">1</div>
+                            <h3>开始录制</h3>
+                            <p>启动录制模式</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-card" id="record-card-2">
+                            <div class="card-number">2</div>
+                            <h3>开发编码</h3>
+                            <p>自动记录步骤</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-card" id="record-card-3">
+                            <div class="card-number">3</div>
+                            <h3>添加说明</h3>
+                            <p>注释关键步骤</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-card" id="record-card-4">
+                            <div class="card-number">4</div>
+                            <h3>保存分享</h3>
+                            <p>生成学习文档</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 播放功能内容 -->
+                <div class="tab-content" id="play-content">
+                    <div class="flow-cards">
+                        <div class="flow-card" id="play-card-1">
+                            <div class="card-number">1</div>
+                            <h3>导入项目</h3>
+                            <p>选择录制文件</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-card" id="play-card-2">
+                            <div class="card-number">2</div>
+                            <h3>逐步播放</h3>
+                            <p>查看开发过程</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-card" id="play-card-3">
+                            <div class="card-number">3</div>
+                            <h3>代码下载</h3>
+                            <p>获取完整代码</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-card" id="play-card-4">
+                            <div class="card-number">4</div>
+                            <h3>实践运行</h3>
+                            <p>本地测试代码</p>
                         </div>
                     </div>
                 </div>
             </div>
+
+
             
             <div class="learning-process">
                 <h3>学习流程</h3>
@@ -418,5 +616,89 @@
             </div>
         </div>
     </section>
+
+    <script>
+        let recordInterval, playInterval;
+        
+        // Tab切换功能
+        function switchTab(tabName) {
+            // 移除所有tab的active类
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // 激活当前tab
+            event.target.classList.add('active');
+            document.getElementById(tabName + '-content').classList.add('active');
+            
+            // 重新启动动画
+            clearInterval(recordInterval);
+            clearInterval(playInterval);
+            
+            if (tabName === 'record') {
+                startRecordAnimation();
+            } else {
+                startPlayAnimation();
+            }
+        }
+        
+        // 录制流程动画
+        function startRecordAnimation() {
+            const cards = [];
+            for (let i = 1; i <= 4; i++) {
+                cards.push(document.getElementById(`record-card-${i}`));
+            }
+            
+            let currentStep = 0;
+            
+            function nextStep() {
+                cards.forEach(card => {
+                    if (card) card.classList.remove('active');
+                });
+                
+                if (cards[currentStep]) {
+                    cards[currentStep].classList.add('active');
+                }
+                
+                currentStep = (currentStep + 1) % 4;
+            }
+            
+            nextStep();
+            recordInterval = setInterval(nextStep, 2000);
+        }
+        
+        // 播放流程动画
+        function startPlayAnimation() {
+            const cards = [];
+            for (let i = 1; i <= 4; i++) {
+                cards.push(document.getElementById(`play-card-${i}`));
+            }
+            
+            let currentStep = 0;
+            
+            function nextStep() {
+                cards.forEach(card => {
+                    if (card) card.classList.remove('active');
+                });
+                
+                if (cards[currentStep]) {
+                    cards[currentStep].classList.add('active');
+                }
+                
+                currentStep = (currentStep + 1) % 4;
+            }
+            
+            nextStep();
+            playInterval = setInterval(nextStep, 2000);
+        }
+        
+        // 页面加载完成后启动
+        document.addEventListener('DOMContentLoaded', function() {
+            startRecordAnimation();
+        });
+    </script>
 </body>
 </html> 
