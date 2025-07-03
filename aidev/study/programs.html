@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目实战 - AI开发学习网</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 导航栏 */
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .nav-back {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .nav-back:hover {
+            color: #007bff;
+        }
+        
+        /* 主内容区 */
+        .hero {
+            background: linear-gradient(135deg, #6f42c1 0%, #e83e8c 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .content {
+            background-color: #fff;
+            padding: 3rem 0;
+        }
+        
+        .intro-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .intro-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .intro-section p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+        
+        .project-card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+        
+        .project-header {
+            background: linear-gradient(135deg, #6f42c1 0%, #e83e8c 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .project-subtitle {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .project-content {
+            padding: 2rem;
+        }
+        
+        .project-description {
+            margin-bottom: 2rem;
+        }
+        
+        .project-description h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .project-description p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .project-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .feature-item {
+            padding: 1.5rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-item h4 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .feature-item p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .learning-path {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .learning-path h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .path-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .path-step {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            background-color: #6f42c1;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+        
+        .path-step h4 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .path-step p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .download-section {
+            background-color: #e8f5e8;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .download-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .download-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .download-info p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .project-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .path-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="../index.html" class="logo">AI开发学习网</a>
+                <a href="../index.html" class="nav-back">← 返回首页</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>项目实战学习</h1>
+            <p>通过真实项目案例，深入掌握AI辅助开发的实战技能</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="intro-section">
+                <h2>实战学习理念</h2>
+                <p>我们相信最好的学习方式是通过实际项目来掌握技能。通过精心设计的实战项目，您将体验从需求分析到项目部署的完整开发流程，在实践中掌握AI辅助开发的精髓。</p>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">📱</div>
+                    <h2 class="project-title">App开发入门</h2>
+                    <p class="project-subtitle">完整的移动应用开发实战项目</p>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-description">
+                        <h3>项目简介</h3>
+                        <p>这是一个完整的移动应用开发实战项目，从零开始构建一个功能完整的移动应用。项目涵盖了现代移动应用开发的所有核心技术和最佳实践。</p>
+                        <p>通过这个项目，您将学习如何使用AI辅助工具来提高开发效率，包括代码生成、调试辅助、UI设计建议等。项目还包含了完整的开发文档和视频教程。</p>
+                    </div>
+                    
+                    <div class="project-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">🎯</div>
+                            <h4>需求分析</h4>
+                            <p>学习如何进行需求分析和产品设计</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">💻</div>
+                            <h4>技术选型</h4>
+                            <p>掌握技术选型和架构设计方法</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🔧</div>
+                            <h4>开发实践</h4>
+                            <p>体验完整的开发流程和最佳实践</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🚀</div>
+                            <h4>部署上线</h4>
+                            <p>学习应用打包、测试和发布流程</p>
+                        </div>
+                    </div>
+                    
+                    <div class="learning-path">
+                        <h3>学习路径</h3>
+                        <div class="path-steps">
+                            <div class="path-step">
+                                <div class="step-number">1</div>
+                                <h4>环境搭建</h4>
+                                <p>配置开发环境和工具</p>
+                            </div>
+                            <div class="path-step">
+                                <div class="step-number">2</div>
+                                <h4>基础框架</h4>
+                                <p>创建项目骨架和基础架构</p>
+                            </div>
+                            <div class="path-step">
+                                <div class="step-number">3</div>
+                                <h4>核心功能</h4>
+                                <p>实现主要业务功能模块</p>
+                            </div>
+                            <div class="path-step">
+                                <div class="step-number">4</div>
+                                <h4>UI优化</h4>
+                                <p>完善用户界面和交互体验</p>
+                            </div>
+                            <div class="path-step">
+                                <div class="step-number">5</div>
+                                <h4>测试调试</h4>
+                                <p>进行全面测试和问题修复</p>
+                            </div>
+                            <div class="path-step">
+                                <div class="step-number">6</div>
+                                <h4>打包发布</h4>
+                                <p>应用打包和发布上线</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="download-section">
+                        <div class="download-icon">📦</div>
+                        <div class="download-info">
+                            <h3>下载实战项目</h3>
+                            <p>获取完整的项目源码、文档和视频教程</p>
+                            <a href="/downloads/programs/app开发入门.rar" class="download-btn">下载项目</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

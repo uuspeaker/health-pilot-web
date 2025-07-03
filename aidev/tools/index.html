@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开发环境检测助手 - AI开发学习网</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 导航栏 */
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .nav-back {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .nav-back:hover {
+            color: #007bff;
+        }
+        
+        /* 主内容区 */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .content {
+            background-color: #fff;
+            padding: 3rem 0;
+        }
+        
+        .tool-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .tool-description {
+            flex: 1;
+        }
+        
+        .tool-description h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .tool-description p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .features-list li {
+            padding: 0.5rem 0;
+            color: #666;
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .features-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .download-section {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .download-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .download-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .download-info p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        
+        .system-requirements {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+        
+        .system-requirements h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .requirement-item {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .requirement-item h4 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .requirement-item p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .tool-info {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .requirements-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="../index.html" class="logo">AI开发学习网</a>
+                <a href="../index.html" class="nav-back">← 返回首页</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>开发环境检测助手</h1>
+            <p>帮助您快速检测和配置不同开发环境的核心配置，提升开发效率</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="tool-info">
+                <div class="tool-description">
+                    <h2>工具介绍</h2>
+                    <p>开发环境检测助手是一个专业的开发环境配置检测工具，能够帮助开发者快速诊断和配置各种开发环境。无论您是新手还是资深开发者，都能通过这个工具快速解决环境配置问题。</p>
+                    
+                    <h3>主要功能</h3>
+                    <ul class="features-list">
+                        <li>检测Node.js、Python、Java等主流开发环境</li>
+                        <li>自动诊断环境配置问题</li>
+                        <li>提供详细的修复建议和步骤</li>
+                        <li>支持多种操作系统（Windows、macOS、Linux）</li>
+                        <li>一键生成环境配置报告</li>
+                        <li>集成常用开发工具检测</li>
+                    </ul>
+                </div>
+                
+                <div class="download-section">
+                    <div class="download-icon">📦</div>
+                    <div class="download-info">
+                        <h3>立即下载</h3>
+                        <p>获取最新版本的开发环境检测助手</p>
+                        <a href="/downloads/tools/开发环境检测助手.rar" class="download-btn">下载工具</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="system-requirements">
+                <h3>系统要求</h3>
+                <div class="requirements-grid">
+                    <div class="requirement-item">
+                        <h4>Windows</h4>
+                        <p>Windows 10/11<br>64位系统</p>
+                    </div>
+                    <div class="requirement-item">
+                        <h4>macOS</h4>
+                        <p>macOS 10.15+<br>Intel/Apple Silicon</p>
+                    </div>
+                    <div class="requirement-item">
+                        <h4>Linux</h4>
+                        <p>Ubuntu 18.04+<br>CentOS 7+</p>
+                    </div>
+                    <div class="requirement-item">
+                        <h4>其他</h4>
+                        <p>2GB RAM<br>100MB 存储空间</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html> 
