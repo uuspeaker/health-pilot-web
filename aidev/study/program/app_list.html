@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App开发案例列表 - AI开发学习网</title>
+    <link rel="stylesheet" href="../programs.css">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #f8f9fa; color: #333; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .navbar { background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 1rem 0; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #007bff; text-decoration: none; }
+        .nav-back { color: #666; text-decoration: none; font-size: 0.9rem; }
+        .nav-back:hover { color: #007bff; }
+        .hero { background: linear-gradient(135deg, #6f42c1 0%, #e83e8c 100%); color: white; padding: 2rem 0; text-align: center; }
+        .hero h1 { font-size: 2rem; font-weight: 700; }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .project-card { background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; position: relative; }
+        .project-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+        .project-status { position: absolute; top: 1rem; right: 1rem; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; background: #28a745; color: white; }
+        .project-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .project-title { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; color: #333; }
+        .project-subtitle { color: #666; font-size: 0.95rem; font-weight: 500; margin-bottom: 1rem; }
+        .project-description { color: #666; margin-bottom: 1.5rem; line-height: 1.6; font-size: 0.95rem; }
+        .project-actions { text-align: center; margin-top: 1.5rem; }
+        .btn { display: inline-block; padding: 0.8rem 1.5rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: all 0.3s; background: #007bff; color: white; }
+        .btn:hover { background: #0056b3; transform: translateY(-2px); }
+        @media (max-width: 768px) { .projects-grid { grid-template-columns: 1fr; } .project-card { padding: 1.5rem; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="../../index.html" class="logo">AI开发学习网</a>
+                <a href="../programs.html" class="nav-back">← 返回项目列表</a>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="container">
+            <h1>App开发案例列表</h1>
+            <p>探索不同类型的App开发实战案例</p>
+        </div>
+    </section>
+    <div class="container">
+        <div class="projects-grid">
+            <div class="project-card available">
+                <div class="project-status">已上线</div>
+                <div class="project-icon">📱</div>
+                <h3 class="project-title">App开发入门</h3>
+                <p class="project-subtitle">建立一个单机版的习惯管理app</p>
+                <p class="project-description">从零开始使用Flutter开发一个完整的习惯追踪应用，学习移动应用开发的完整流程。</p>
+                <div class="project-actions">
+                    <a href="app_start.html" class="btn">查看详情</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
