@@ -146,11 +146,29 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             text-align: center;
+            position: relative;
         }
         
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .project-status {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: #28a745;
+            color: white;
+        }
+        
+        .project-status.coming-soon {
+            background: #ffc107;
+            color: #856404;
         }
         
         .project-icon {
@@ -354,6 +372,7 @@
             <div class="projects-grid">
                 <!-- 移动应用开发 -->
                 <div class="project-card" onclick="location.href='study/program/app/app_list.html'">
+                    <span class="project-status">1</span>
                     <div class="project-icon">📱</div>
                     <h3 class="project-title">App开发</h3>
                     <p class="project-subtitle">多种App开发实战案例</p>
@@ -362,6 +381,7 @@
 
                 <!-- Web前端开发 -->
                 <div class="project-card" onclick="location.href='study/program/web/web_list.html'">
+                    <span class="project-status">1</span>
                     <div class="project-icon">🌐</div>
                     <h3 class="project-title">Web前端开发</h3>
                     <p class="project-subtitle">多种Web前端开发实战案例</p>
@@ -370,6 +390,7 @@
 
                 <!-- 小程序开发 -->
                 <div class="project-card">
+                    <span class="project-status coming-soon">即将上线</span>
                     <div class="project-icon">📋</div>
                     <h3 class="project-title">小程序开发</h3>
                     <p class="project-subtitle">多种小程序开发实战案例</p>
@@ -383,6 +404,7 @@
 
                 <!-- 数据分析项目 -->
                 <div class="project-card">
+                    <span class="project-status coming-soon">即将上线</span>
                     <div class="project-icon">📊</div>
                     <h3 class="project-title">数据分析</h3>
                     <p class="project-subtitle">多种数据分析实战案例</p>
@@ -396,6 +418,7 @@
 
                 <!-- 桌面应用开发 -->
                 <div class="project-card">
+                    <span class="project-status coming-soon">即将上线</span>
                     <div class="project-icon">🖥️</div>
                     <h3 class="project-title">桌面应用开发</h3>
                     <p class="project-subtitle">多种桌面应用开发实战案例</p>
@@ -409,6 +432,7 @@
 
                 <!-- 插件开发 -->
                 <div class="project-card">
+                    <span class="project-status coming-soon">即将上线</span>
                     <div class="project-icon">🔌</div>
                     <h3 class="project-title">插件开发</h3>
                     <p class="project-subtitle">多种插件开发实战案例</p>
