@@ -71,38 +71,6 @@
             color: #007bff;
         }
         
-        .dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #fff;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-radius: 4px;
-            min-width: 200px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.3s ease;
-        }
-        
-        .nav-item:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        
-        .dropdown-item {
-            display: block;
-            padding: 0.75rem 1rem;
-            color: #333;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        
-        .dropdown-item:hover {
-            background-color: #f8f9fa;
-        }
-        
         /* 移动端菜单 */
         .mobile-menu-toggle {
             display: none;
@@ -144,51 +112,152 @@
             text-decoration: none;
             font-weight: 600;
             transition: transform 0.3s ease;
+            margin:  0 1rem 0 1rem;
         }
         
         .cta-button:hover {
             transform: translateY(-2px);
         }
         
-        /* 特色介绍 */
-        .features {
+        /* 项目区域 */
+        .projects {
             padding: 4rem 0;
             background-color: #fff;
         }
         
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .feature-card {
+        .projects h2 {
             text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 12px;
             padding: 2rem;
-            border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-align: center;
         }
         
-        .feature-card:hover {
+        .project-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
         
-        .feature-icon {
+        .project-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
         
-        .feature-title {
+        .project-title {
             font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
             color: #333;
         }
         
-        .feature-desc {
+        .project-subtitle {
             color: #666;
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .project-description {
+            color: #666;
+            margin-bottom: 1.5rem;
             line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .project-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+        
+        .btn {
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        
+        .btn-secondary {
+            background-color: #28a745;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #1e7e34;
+        }
+        
+        .btn-interest {
+            background-color: #f8f9fa;
+            color: #333;
+            border: 2px solid #ddd;
+        }
+        
+        .btn-interest:hover {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        
+        .interest-count {
+            background-color: #dc3545;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+        
+        .interest-stats {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .interest-stats h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        .interest-stats p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .stats-display {
+            font-size: 1.1rem;
+            color: #333;
         }
         
         /* 响应式设计 */
@@ -228,22 +297,6 @@
                 display: block;
             }
             
-            .dropdown {
-                position: static;
-                box-shadow: none;
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-                background-color: #f8f9fa;
-                margin-top: 0.5rem;
-                border-radius: 8px;
-            }
-            
-            .dropdown-item {
-                padding: 0.75rem 1.5rem;
-                font-size: 1rem;
-            }
-            
             .hero h1 {
                 font-size: 2rem;
             }
@@ -252,8 +305,17 @@
                 font-size: 1rem;
             }
             
-            .features-grid {
+            .projects-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .project-card {
+                padding: 1.5rem;
+            }
+            
+            .project-actions {
+                flex-direction: column;
+                gap: 8px;
             }
         }
     </style>
@@ -264,20 +326,6 @@
             <div class="nav-container">
                 <a href="#" class="logo">AI开发学习网</a>
                 <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">工具导航</a>
-                        <div class="dropdown">
-                            <a href="tools/index.html" class="dropdown-item">开发环境检测助手</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">实战学习</a>
-                        <div class="dropdown">
-                            <a href="study/approach.html" class="dropdown-item">学习模式</a>
-                            <a href="study/index.html" class="dropdown-item">学习工具</a>
-                            <a href="study/programs.html" class="dropdown-item">项目实战</a>
-                        </div>
-                    </li>
                     <li class="nav-item">
                         <a href="examples/index.html" class="nav-link">成功案例</a>
                     </li>
@@ -294,28 +342,91 @@
         <div class="container">
             <h1>掌握AI辅助开发技术</h1>
             <p>通过实战项目和专业工具，帮助开发者快速掌握AI辅助开发技术，提升开发效率，打造更优秀的产品</p>
-            <a href="study/approach.html" class="cta-button">开始学习</a>
+            <a href="tools/index.html" class="cta-button">环境检测工具</a>
+                
+            <a href="study/index.html" class="cta-button">项目跟学工具</a>
         </div>
     </section>
 
-    <section class="features">
+    <section class="projects">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">为什么选择我们？</h2>
-            <div class="features-grid">
-                <div class="feature-card" onclick="location.href='tools/index.html'" style="cursor: pointer;">
-                    <div class="feature-icon">🛠️</div>
-                    <h3 class="feature-title">专业工具</h3>
-                    <p class="feature-desc">提供开发环境检测、录播器等实用工具，帮助您快速配置开发环境，记录学习过程</p>
+            <h2>实战项目</h2>
+            <div class="projects-grid">
+                <!-- 移动应用开发 -->
+                <div class="project-card" onclick="location.href='study/program/app/app_list.html'">
+                    <div class="project-icon">📱</div>
+                    <h3 class="project-title">App开发</h3>
+                    <p class="project-subtitle">多种App开发实战案例</p>
+                    <p class="project-description">涵盖Flutter、React Native等多种移动应用开发案例，适合不同阶段的学习者。</p>
                 </div>
-                <div class="feature-card" onclick="location.href='study/programs.html'" style="cursor: pointer;">
-                    <div class="feature-icon">📚</div>
-                    <h3 class="feature-title">实战项目</h3>
-                    <p class="feature-desc">通过真实项目案例，逐步掌握AI辅助开发的核心技术和最佳实践</p>
+
+                <!-- Web前端开发 -->
+                <div class="project-card" onclick="location.href='study/program/web/web_list.html'">
+                    <div class="project-icon">🌐</div>
+                    <h3 class="project-title">Web前端开发</h3>
+                    <p class="project-subtitle">多种Web前端开发实战案例</p>
+                    <p class="project-description">涵盖React、Vue、Angular等多种前端框架开发案例，适合不同阶段的学习者。</p>
                 </div>
-                <div class="feature-card" onclick="location.href='examples/index.html'" style="cursor: pointer;">
-                    <div class="feature-icon">🎯</div>
-                    <h3 class="feature-title">成功案例</h3>
-                    <p class="feature-desc">展示已成功上线的AI辅助开发产品，为您的学习提供实际参考</p>
+
+                <!-- 小程序开发 -->
+                <div class="project-card">
+                    <div class="project-icon">📋</div>
+                    <h3 class="project-title">小程序开发</h3>
+                    <p class="project-subtitle">多种小程序开发实战案例</p>
+                    <p class="project-description">涵盖微信小程序、支付宝小程序等多种小程序开发案例，适合不同阶段的学习者。</p>
+                    <div class="project-actions">
+                        <button class="btn btn-interest" onclick="toggleInterest('miniprogram')">
+                            我想学习 <span class="interest-count" id="count-miniprogram">0</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 数据分析项目 -->
+                <div class="project-card">
+                    <div class="project-icon">📊</div>
+                    <h3 class="project-title">数据分析</h3>
+                    <p class="project-subtitle">多种数据分析实战案例</p>
+                    <p class="project-description">涵盖Python、R、SQL等多种数据分析技术案例，适合不同阶段的学习者。</p>
+                    <div class="project-actions">
+                        <button class="btn btn-interest" onclick="toggleInterest('data-analysis')">
+                            我想学习 <span class="interest-count" id="count-data-analysis">0</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 桌面应用开发 -->
+                <div class="project-card">
+                    <div class="project-icon">🖥️</div>
+                    <h3 class="project-title">桌面应用开发</h3>
+                    <p class="project-subtitle">多种桌面应用开发实战案例</p>
+                    <p class="project-description">涵盖Electron、Qt、WPF等多种桌面应用开发案例，适合不同阶段的学习者。</p>
+                    <div class="project-actions">
+                        <button class="btn btn-interest" onclick="toggleInterest('desktop-app')">
+                            我想学习 <span class="interest-count" id="count-desktop-app">0</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 插件开发 -->
+                <div class="project-card">
+                    <div class="project-icon">🔌</div>
+                    <h3 class="project-title">插件开发</h3>
+                    <p class="project-subtitle">多种插件开发实战案例</p>
+                    <p class="project-description">涵盖VSCode插件、Chrome扩展、WordPress插件等多种插件开发案例，适合不同阶段的学习者。</p>
+                    <div class="project-actions">
+                        <button class="btn btn-interest" onclick="toggleInterest('plugin-dev')">
+                            我想学习 <span class="interest-count" id="count-plugin-dev">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 学习意愿统计 -->
+            <div class="interest-stats">
+                <h3>📈 学习需求统计</h3>
+                <p>我们会根据大家的学习意愿优先开发相关项目</p>
+                <div class="stats-display">
+                    <span>总需求: <strong id="total-interest">0</strong></span>
                 </div>
             </div>
         </div>
@@ -327,24 +438,110 @@
             const mobileToggle = document.querySelector('.mobile-menu-toggle');
             const navMenu = document.querySelector('.nav-menu');
             
-            mobileToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-            });
-            
-            // 点击外部区域关闭菜单
-            document.addEventListener('click', function(event) {
-                if (!navMenu.contains(event.target) && !mobileToggle.contains(event.target)) {
-                    navMenu.classList.remove('active');
-                }
-            });
-            
-            // 点击菜单项后关闭菜单
-            const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    navMenu.classList.remove('active');
+            if (mobileToggle && navMenu) {
+                mobileToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
                 });
-            });
+                
+                // 点击外部区域关闭菜单
+                document.addEventListener('click', function(event) {
+                    if (!navMenu.contains(event.target) && !mobileToggle.contains(event.target)) {
+                        navMenu.classList.remove('active');
+                    }
+                });
+                
+                // 点击菜单项后关闭菜单
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+        });
+
+        // 学习意愿管理
+        const INTEREST_STORAGE_KEY = 'learning_interests';
+        const CLICK_COOLDOWN = 5000; // 5秒防重复点击
+        
+        // 从localStorage加载数据
+        function loadInterests() {
+            const stored = localStorage.getItem(INTEREST_STORAGE_KEY);
+            return stored ? JSON.parse(stored) : {
+                'miniprogram': 0,
+                'data-analysis': 0,
+                'desktop-app': 0,
+                'plugin-dev': 0,
+                lastClicks: {}
+            };
+        }
+        
+        // 保存数据到localStorage
+        function saveInterests(interests) {
+            localStorage.setItem(INTEREST_STORAGE_KEY, JSON.stringify(interests));
+        }
+        
+        // 更新显示
+        function updateDisplay() {
+            const interests = loadInterests();
+            let total = 0;
+            
+            // 更新每个项目的计数
+            for (const [key, count] of Object.entries(interests)) {
+                if (key !== 'lastClicks') {
+                    const countElement = document.getElementById(`count-${key}`);
+                    if (countElement) {
+                        countElement.textContent = count;
+                        total += count;
+                    }
+                }
+            }
+            
+            // 更新总计数
+            const totalElement = document.getElementById('total-interest');
+            if (totalElement) {
+                totalElement.textContent = total;
+            }
+        }
+        
+        // 切换学习意愿
+        function toggleInterest(projectId) {
+            const interests = loadInterests();
+            const now = Date.now();
+            const lastClick = interests.lastClicks[projectId] || 0;
+            
+            // 检查是否在冷却期内
+            if (now - lastClick < CLICK_COOLDOWN) {
+                const remainingTime = Math.ceil((CLICK_COOLDOWN - (now - lastClick)) / 1000);
+                alert(`请等待 ${remainingTime} 秒后再次点击`);
+                return;
+            }
+            
+            // 增加计数
+            interests[projectId] = (interests[projectId] || 0) + 1;
+            interests.lastClicks[projectId] = now;
+            
+            // 保存并更新显示
+            saveInterests(interests);
+            updateDisplay();
+            
+            // 临时禁用按钮
+            const button = event.target;
+            button.disabled = true;
+            button.style.opacity = '0.6';
+            
+            setTimeout(() => {
+                button.disabled = false;
+                button.style.opacity = '1';
+            }, CLICK_COOLDOWN);
+            
+            // 显示感谢消息
+            alert('感谢您的反馈！我们会根据学习需求优先开发相关项目。');
+        }
+        
+        // 页面加载时初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDisplay();
         });
     </script>
 </body>
