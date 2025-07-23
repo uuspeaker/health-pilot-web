@@ -365,33 +365,7 @@
                 <p>以下产品都是通过AI辅助开发技术完成的，从需求分析到代码实现，从UI设计到功能测试，AI工具大大提升了开发效率和产品质量。</p>
             </div>
 
-            <!-- 儿童健康 -->
-            <div class="category">
-                <h2 class="category-title">儿童健康</h2>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <div class="product-header">
-                            <div class="product-icon">
-                                <img src="../../kid/icon/宝宝健康手册.png" alt="宝宝健康手册" onerror="this.parentNode.innerHTML='<div class=\'product-icon-placeholder\'>🏥</div>'">
-                            </div>
-                            <h3 class="product-name">宝宝健康手册</h3>
-                            <p class="product-subtitle">孩子生病不用慌</p>
-                            <div class="download-buttons">
-                                <a href="https://apps.apple.com/cn/app/id6745573867" class="download-btn ios region-limited">
-                                    <span class="platform-icon">🍎</span>
-                                    iOS下载
-                                    <div class="region-notice">该应用在中国大陆地区暂时下架</div>
-                                </a>
-                                <a href="/downloads/app/宝宝健康手册.apk" class="download-btn android">
-                                    <span class="platform-icon">🤖</span>
-                                    Android下载
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            
             <!-- 健康管理 -->
             <div class="category">
                 <h2 class="category-title">健康管理</h2>
@@ -435,6 +409,28 @@
                             </div>
                         </div>
                     </div>
+					<div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-header">
+                            <div class="product-icon">
+                                <img src="../../kid/icon/宝宝健康手册.png" alt="宝宝健康手册" onerror="this.parentNode.innerHTML='<div class=\'product-icon-placeholder\'>🏥</div>'">
+                            </div>
+                            <h3 class="product-name">宝宝健康手册</h3>
+                            <p class="product-subtitle">孩子生病不用慌</p>
+                            <div class="download-buttons">
+                                <a href="https://apps.apple.com/cn/app/id6745573867" class="download-btn ios region-limited">
+                                    <span class="platform-icon">🍎</span>
+                                    iOS下载
+                                    <div class="region-notice">该应用在中国大陆地区暂时下架</div>
+                                </a>
+                                <a href="/downloads/app/宝宝健康手册.apk" class="download-btn android">
+                                    <span class="platform-icon">🤖</span>
+                                    Android下载
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
 
@@ -561,10 +557,9 @@
                             <h3 class="product-name">演讲助理</h3>
                             <p class="product-subtitle">轻松准备演讲</p>
                             <div class="download-buttons">
-                                <a href="https://apps.apple.com/cn/app/id6747158031" class="download-btn ios region-limited">
+								<a href="https://apps.apple.com/cn/app/id6747158031" class="download-btn ios">
                                     <span class="platform-icon">🍎</span>
                                     iOS下载
-                                    <div class="region-notice">该应用在中国大陆地区暂时下架</div>
                                 </a>
                                 <a href="/downloads/app/演讲助理.apk" class="download-btn android">
                                     <span class="platform-icon">🤖</span>
@@ -595,6 +590,8 @@
                 </div>
             </div>
         </div>
+		
+
     </section>
 
     <section class="stats">
