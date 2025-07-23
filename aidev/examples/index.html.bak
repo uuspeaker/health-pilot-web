@@ -561,9 +561,10 @@
                             <h3 class="product-name">演讲助理</h3>
                             <p class="product-subtitle">轻松准备演讲</p>
                             <div class="download-buttons">
-								<a href="https://apps.apple.com/cn/app/id6747158031" class="download-btn ios">
+                                <a href="https://apps.apple.com/cn/app/id6747158031" class="download-btn ios region-limited">
                                     <span class="platform-icon">🍎</span>
                                     iOS下载
+                                    <div class="region-notice">该应用在中国大陆地区暂时下架</div>
                                 </a>
                                 <a href="/downloads/app/演讲助理.apk" class="download-btn android">
                                     <span class="platform-icon">🤖</span>
