@@ -378,10 +378,9 @@
                             <h3 class="product-name">健康守卫</h3>
                             <p class="product-subtitle">根据科学研究报告健康打卡</p>
                             <div class="download-buttons">
-                                <a href="https://apps.apple.com/cn/app/id6745573867" class="download-btn ios region-limited">
+								<a href="https://apps.apple.com/cn/app/id6743696398" class="download-btn ios">
                                     <span class="platform-icon">🍎</span>
                                     iOS下载
-                                    <div class="region-notice">该应用在中国大陆地区暂时下架</div>
                                 </a>
                                 <a href="/downloads/app/健康守卫.apk" class="download-btn android">
                                     <span class="platform-icon">🤖</span>
@@ -590,7 +589,6 @@
                 </div>
             </div>
         </div>
-		
 
     </section>
 
