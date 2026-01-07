@@ -1,10 +1,10 @@
-# 通用隐私和支持页面
+# 通用应用配置页面
 
-这个目录包含可复用的隐私政策和技术支持页面,适用于所有应用。
+这个目录包含可复用的隐私政策、技术支持和EULA(最终用户许可协议)页面,适用于所有应用。
 
 ## 使用方法
 
-两个页面都支持通过URL参数 `app` 来动态设置应用名称。
+所有页面都支持通过URL参数 `app` 来动态设置应用名称。
 
 ### 隐私政策页面
 
@@ -16,6 +16,12 @@ https://your-domain.com/privacy.html?app=应用名称
 
 ```
 https://your-domain.com/support.html?app=应用名称
+```
+
+### EULA页面
+
+```
+https://your-domain.com/eula.html?app=应用名称
 ```
 
 ## 示例
@@ -46,10 +52,19 @@ https://your-domain.com/support.html?app=应用名称
 - 功能建议提交入口
 - 联系方式和响应时间
 
+### EULA内容
+- 许可授予和使用限制
+- 知识产权保护
+- 数据和隐私条款
+- 免责声明和责任限制
+- 终止条款和适用法律
+- 完整的法律保护条款(15个章节)
+
 ## 文件说明
 
 - `privacy.html` - 隐私政策页面
 - `support.html` - 技术支持页面
+- `eula.html` - 最终用户许可协议页面
 - `*.html.bak` - 备份文件(旧版本)
 
 ## 在Flutter应用中使用
@@ -62,6 +77,9 @@ https://your-domain.com/support.html?app=应用名称
 
 <key>SUPPORT_URL</key>
 <string>https://your-domain.com/support.html?app=YourAppName</string>
+
+<key>EULA_URL</key>
+<string>https://your-domain.com/eula.html?app=YourAppName</string>
 ```
 
 ## 更新说明
